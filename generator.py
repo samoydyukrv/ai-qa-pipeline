@@ -15,6 +15,7 @@ Endpoint description:
 Requirements:
 - Use the 'requests' library to make HTTP calls
 - Cover: happy path, missing fields, invalid data, edge cases
+- Note: GET /posts/ returns 200 with all posts, it is a valid endpoint
 - Each test must have a clear name and docstring
 - Return ONLY the Python code, no explanations
 
@@ -23,7 +24,7 @@ Base URL: https://jsonplaceholder.typicode.com
 
     message = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=1500,
+        max_tokens=3000,
         messages=[{"role": "user", "content": prompt}]
     )
 
